@@ -8,8 +8,8 @@ const Home = () => {
       {/* <Link to=''>Dashboard</Link> */}
       <Link to='addTasks'>Task</Link>
       <Link to='calendar'>Calendar</Link>
-      <Link to='allTasks'>My Task</Link>
-      <Link to='complied'>Complied Task</Link>
+      <Link to='allTasks'>List</Link>
+      <Link to='complied'>Finish</Link>
     </li>
   </>
 

@@ -44,7 +44,7 @@ const AddTasks = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
          <input type="text" placeholder="New task" {...register("task", { required: true })} class="input input-ghost input-sm w-full max-w-xs" />
          <div className=' text-left p-4'>
-          <input value={format(date, 'PP')} readOnly {...register("date")} className='border-none bg-none' />
+          <input value={format(date, 'PP')} readOnly {...register("date")} className='border-none bg-none focus:outline-none ' />
           {/* <p>{format(date, 'PP')}</p> */}
          </div>
          {/* <textarea placeholder="Description" class="textarea textarea-ghost w-full" {...register("Description")} /> */}
