@@ -6,6 +6,7 @@ import Dashboard from './Components/App/Dashboard/Dashboard'
 import AddTask from './Components/App/Add Tasks/AddTasks';
 import AllTasks from './Components/App/All Tasks/AllTasks';
 import Complied from './Components/App/Complied/Complied'
+import Calendar from './Components/App/Calendar/Calendar';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>} >
           <Route index element={<Dashboard></Dashboard>}></Route>
+          <Route path='calendar' element={<Calendar></Calendar>}></Route>
           <Route path='addTasks' element={<AddTask></AddTask>}></Route>
           <Route path='allTasks' element={<AllTasks></AllTasks>}></Route>
           <Route path='complied' element={<Complied></Complied>}></Route>
