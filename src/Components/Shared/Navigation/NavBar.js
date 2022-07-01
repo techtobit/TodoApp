@@ -8,8 +8,9 @@ const NavBar = () => {
   <li>
    {/* <Link to=''>Dashboard</Link> */}
    <Link to='addTasks'>Task</Link>
-   <Link to='allTasks'>My Task</Link>
-   <Link to='complied'>Complied Task</Link>
+   <Link to='calendar'>Calendar</Link>
+   <Link to='allTasks'>List</Link>
+   <Link to='complied'>Finish</Link>
   </li>
  </>
  return (
@@ -26,7 +27,7 @@ const NavBar = () => {
     </div>
     <div className="app-logo flex items-center">
      <img className='AppLogo' src={AppLogo} alt="" />
-     <h2>Task Bord</h2>
+     <h2 className='lg:text-xl sm:text-lg  font-bold'>Task Bord</h2>
     </div>
    </div>
    <div className="navbar-center hidden lg:flex">
