@@ -15,9 +15,9 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home></Home>} >
-          <Route index element={<Dashboard></Dashboard>}></Route>
+          {/* <Route element={<Dashboard></Dashboard>}></Route> */}
           <Route path='calendar' element={<Calendar></Calendar>}></Route>
-          <Route path='addTasks' element={<AddTask></AddTask>}></Route>
+          <Route index element={<AddTask></AddTask>}></Route>
           <Route path='allTasks' element={<List></List>}></Route>
           <Route path='complied' element={<FinishList></FinishList>}></Route>
         </Route>

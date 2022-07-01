@@ -6,7 +6,7 @@ const Home = () => {
   const AppMenu = <>
     <li>
       {/* <Link to=''>Dashboard</Link> */}
-      <Link to='addTasks'>Task</Link>
+      <Link to=''>Task</Link>
       <Link to='calendar'>Calendar</Link>
       <Link to='allTasks'>List</Link>
       <Link to='complied'>Finish</Link>
