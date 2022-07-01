@@ -18,13 +18,13 @@ const AddedTask = ({ tasks }) => {
         date: date,
         Description: Description
       }
-      const url = 'http://localhost:5000/taskFinish';
+      const url = 'https://sleepy-dawn-13641.herokuapp.com/taskFinish';
       axios.post(url, tasks)
         .then(response => {
           console.log(response)
 
           //delete finish task from task list
-          const url = `http://localhost:5000/task/${_id}`
+          const url = `https://sleepy-dawn-13641.herokuapp.com/task/${_id}`
           axios.delete(url, _id)
             .then(response => console.log(response))
 

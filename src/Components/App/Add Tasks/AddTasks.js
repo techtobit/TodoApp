@@ -17,7 +17,7 @@ const AddTasks = () => {
   const onSubmit = data => {
 
     if (data) {
-      const url = 'http://localhost:5000/task';
+      const url = 'https://sleepy-dawn-13641.herokuapp.com/task';
       axios.post(url, data)
         .then(response => console.log(response))
     }

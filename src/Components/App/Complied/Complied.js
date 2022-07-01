@@ -8,7 +8,7 @@ const Complied = ({ tasks }) => {
   const { task, Description, date, _id } = tasks
 
   const handleDeleteForever = id => {
-    const url = `http://localhost:5000/taskFinish/${id}`
+    const url = `https://sleepy-dawn-13641.herokuapp.com/taskFinish/${id}`
     console.log(url);
     axios.delete(url, id)
       .then(response => console.log(response))

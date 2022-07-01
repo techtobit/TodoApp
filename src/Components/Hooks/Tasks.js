@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
 const Tasks = () => {
- const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
- useEffect(() => {
-  const url = 'http://localhost:5000/task';
-  fetch(url)
-   .then(res => res.json())
-   .then(data => setTasks(data))
- }, [tasks])
+  useEffect(() => {
+    const url = 'https://sleepy-dawn-13641.herokuapp.com/task';
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setTasks(data))
+  }, [tasks])
 
- return [tasks, setTasks];
+  return [tasks, setTasks];
 };
 
 export default Tasks;

@@ -13,7 +13,7 @@ const Modal = ({ taskId }) => {
 
 
   useEffect(() => {
-    const url = `http://localhost:5000/task/${taskId}`;
+    const url = `https://sleepy-dawn-13641.herokuapp.com/task/${taskId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setUpDateTask(data))
@@ -24,7 +24,7 @@ const Modal = ({ taskId }) => {
     console.log(data);
 
     if (data) {
-      const url = `http://localhost:5000/task/${taskId}`;
+      const url = `https://sleepy-dawn-13641.herokuapp.com/task/${taskId}`;
       axios.put(url, data)
         .then(response => console.log(response))
     }
@@ -35,7 +35,7 @@ const Modal = ({ taskId }) => {
   const handleDeleteTask = Id => {
     if (Id) {
 
-      const url = `http://localhost:5000/task/${Id}`
+      const url = `https://sleepy-dawn-13641.herokuapp.com/task/${Id}`
       axios.delete(url, Id)
         .then(response => console.log(response))
 
