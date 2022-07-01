@@ -5,18 +5,18 @@ import axios from 'axios';
 import Modal from '../../Shared/Modal/Modal';
 
 const AddedTask = ({ tasks }) => {
-  const { task, date, _id } = tasks;
+  const { task, date, _id, Description } = tasks;
   const [editTask, setEditTask] = useState([])
 
-  const handelTaskFinish = (_id, task, date) => {
-    console.log('task finish', _id, task, date);
+  const handelTaskFinish = (_id, task, date, Description) => {
     if (_id) {
 
       //save finish task to complied task database
       const tasks = {
         taskId: _id,
         task: task,
-        date: date
+        date: date,
+        Description: Description
       }
       const url = 'http://localhost:5000/taskFinish';
       axios.post(url, tasks)
@@ -40,10 +40,10 @@ const AddedTask = ({ tasks }) => {
       <div class="card  bg-base-100 shadow-xl">
         <div class="card-body">
           <div className="task flex items-center">
-            <input type="radio" onClick={() => handelTaskFinish(_id, task, date)} name="radio-1" class="radio" />
+            <input type="radio" onClick={() => handelTaskFinish(_id, task, date, Description)} name="radio-1" class="radio" />
             <div className="task-data px-5">
-              <p class="">{task}
-              </p>
+              <p class="">{task}</p>
+              <p className='font-xs'>{Description}</p>
               <div className='pl-2'>
                 <p class="border-primary border-2 p-1 text-xs">
                   <FontAwesomeIcon icon={faCalendarDays} className='pr-2'></FontAwesomeIcon>
