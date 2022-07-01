@@ -24,9 +24,9 @@ const Modal = ({ taskId }) => {
     console.log(data);
 
     if (data) {
-      // const url = `http://localhost:5000/task/${taskId}`;
-      // axios.post(url, data)
-      //   .then(response => console.log(response))
+      const url = `http://localhost:5000/task/${taskId}`;
+      axios.put(url, data)
+        .then(response => console.log(response))
     }
     reset();
   };

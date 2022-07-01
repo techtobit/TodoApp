@@ -42,8 +42,10 @@ const AddedTask = ({ tasks }) => {
           <div className="task flex items-center">
             <input type="radio" onClick={() => handelTaskFinish(_id, task, date, Description)} name="radio-1" class="radio" />
             <div className="task-data px-5">
-              <p class="">{task}</p>
-              <p className='font-xs'>{Description}</p>
+              <p class="">{task}
+                <br />
+                <span className='text-xs'>{Description}</span>
+              </p>
               <div className='pl-2'>
                 <p class="border-primary border-2 p-1 text-xs">
                   <FontAwesomeIcon icon={faCalendarDays} className='pr-2'></FontAwesomeIcon>
