@@ -8,6 +8,7 @@ import AllTasks from './Components/App/All Tasks/AllTasks';
 import Complied from './Components/App/Complied/Complied'
 import Calendar from './Components/App/Calendar/Calendar';
 import List from './Components/App/All Tasks/List';
+import FinishList from './Components/App/Complied/FinishList';
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
           <Route path='calendar' element={<Calendar></Calendar>}></Route>
           <Route path='addTasks' element={<AddTask></AddTask>}></Route>
           <Route path='allTasks' element={<List></List>}></Route>
-          <Route path='complied' element={<Complied></Complied>}></Route>
+          <Route path='complied' element={<FinishList></FinishList>}></Route>
         </Route>
       </Routes>
 
