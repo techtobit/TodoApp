@@ -9,6 +9,7 @@ import Complied from './Components/App/Complied/Complied'
 import Calendar from './Components/App/Calendar/Calendar';
 import List from './Components/App/All Tasks/List';
 import FinishList from './Components/App/Complied/FinishList';
+import Footer from './Components/Shared/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,7 @@ function App() {
           <Route path='complied' element={<FinishList></FinishList>}></Route>
         </Route>
       </Routes>
-
+      <Footer></Footer>
     </div>
   );
 }
