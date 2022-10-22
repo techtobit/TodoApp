@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
+import toast from 'react-hot-toast';
 
 const Modal = ({ taskId }) => {
   const [upDateTask, setUpDateTask] = useState([]);
@@ -13,7 +14,7 @@ const Modal = ({ taskId }) => {
 
 
   useEffect(() => {
-    const url = `https://sleepy-dawn-13641.herokuapp.com/task/${taskId}`;
+    const url = `https://secret-wave-39782.herokuapp.com/task/${taskId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setUpDateTask(data))
@@ -21,12 +22,14 @@ const Modal = ({ taskId }) => {
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
-    console.log(data);
-
     if (data) {
-      const url = `https://sleepy-dawn-13641.herokuapp.com/task/${taskId}`;
+      const url = `https://secret-wave-39782.herokuapp.com/task/${taskId}`;
       axios.put(url, data)
-        .then(response => console.log(response))
+        .then(response => {
+          toast.success('Done')
+          console.log(response)
+        })
+
     }
     reset();
   };
@@ -35,9 +38,12 @@ const Modal = ({ taskId }) => {
   const handleDeleteTask = Id => {
     if (Id) {
 
-      const url = `https://sleepy-dawn-13641.herokuapp.com/task/${Id}`
+      const url = `https://secret-wave-39782.herokuapp.com/task/${Id}`
       axios.delete(url, Id)
-        .then(response => console.log(response))
+        .then(response => {
+          toast.success('Deleted')
+          console.log(response)
+        })
 
     }
   }

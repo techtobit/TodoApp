@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Modal from '../../Shared/Modal/Modal';
+import toast from 'react-hot-toast';
 
 const AllTasks = ({ tasks }) => {
   const { task, date, _id, Description } = tasks;
@@ -18,15 +19,18 @@ const AllTasks = ({ tasks }) => {
         date: date,
         Description: Description
       }
-      const url = 'https://sleepy-dawn-13641.herokuapp.com/taskFinish';
+      const url = 'https://secret-wave-39782.herokuapp.com/taskFinish';
       axios.post(url, tasks)
         .then(response => {
+          toast.success('Task Completed')
           console.log(response)
 
           //delete finish task from task list
-          const url = `https://sleepy-dawn-13641.herokuapp.com/task/${_id}`
+          const url = `https://secret-wave-39782.herokuapp.com/task/${_id}`
           axios.delete(url, _id)
-            .then(response => console.log(response))
+            .then(response => {
+              console.log(response)
+            })
 
         })
     }

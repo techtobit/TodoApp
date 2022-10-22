@@ -5,7 +5,7 @@ const FinishList = () => {
   const [finishTask, setFinishTask] = useState([])
 
   useEffect(() => {
-    fetch('https://sleepy-dawn-13641.herokuapp.com/taskFinish')
+    fetch('https://secret-wave-39782.herokuapp.com/taskFinish')
       .then(res => res.json())
       .then(data => setFinishTask(data))
   }, [finishTask])

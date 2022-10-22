@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 import Tasks from '../../Hooks/Tasks';
 import AddedTask from './AddedTask';
+import toast from 'react-hot-toast';
 // import { toast } from 'react-toastify';
 
 const AddTasks = () => {
@@ -17,9 +18,15 @@ const AddTasks = () => {
   const onSubmit = data => {
 
     if (data) {
-      const url = 'https://sleepy-dawn-13641.herokuapp.com/task';
+      const url = 'https://secret-wave-39782.herokuapp.com/task';
       axios.post(url, data)
-        .then(response => console.log(response))
+        .then(response => {
+          toast.success('New Task Add')
+          console.log(response)
+        })
+    }
+    else {
+      toast.error("Unsuccessful")
     }
     reset();
   };

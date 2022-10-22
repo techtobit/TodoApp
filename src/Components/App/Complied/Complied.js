@@ -2,16 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome';
 import { faTrash, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const Complied = ({ tasks }) => {
 
   const { task, Description, date, _id } = tasks
 
   const handleDeleteForever = id => {
-    const url = `https://sleepy-dawn-13641.herokuapp.com/taskFinish/${id}`
+    const url = `https://secret-wave-39782.herokuapp.com/taskFinish/${id}`
     console.log(url);
     axios.delete(url, id)
-      .then(response => console.log(response))
+      .then(response => {
+        toast.success('Task Deleted')
+        console.log(response)
+      })
     window.location.reload();
 
   }

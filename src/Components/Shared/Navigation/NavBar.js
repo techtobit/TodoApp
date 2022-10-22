@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AppLogo from '../../Assets/Logo/TodoApp.png'
 import './NavBar.css'
+import { FiPlusSquare, FiList } from "react-icons/fi";
 
 const NavBar = () => {
  const AppMenu = <>
   <li>
-   {/* <Link to=''>Dashboard</Link> */}
-   <Link to=''>Task</Link>
+   <Link to=''>Add Task</Link>
    <Link to='calendar'>Calendar</Link>
-   <Link to='allTasks'>List</Link>
+   <Link to='allTasks'>Task List</Link>
    <Link to='complied'>Finish</Link>
   </li>
  </>
@@ -27,7 +27,7 @@ const NavBar = () => {
     </div>
     <div className="app-logo flex items-center">
      <img className='AppLogo' src={AppLogo} alt="" />
-     <h2 className='lg:text-xl sm:text-lg  font-bold'>Task Bord</h2>
+     <h2 className='lg:text-xl sm:text-lg  font-bold'>Task Board</h2>
     </div>
    </div>
    <div className="navbar-center hidden lg:flex">
