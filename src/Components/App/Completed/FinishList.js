@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Complied from './Complied';
+import Completed from './Completed';
 
 const FinishList = () => {
   const [finishTask, setFinishTask] = useState([])
@@ -12,10 +12,10 @@ const FinishList = () => {
   return (
     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
       {
-        finishTask.map(tasks => <Complied
+        finishTask.map(tasks => <Completed
           key={tasks._id}
           tasks={tasks}
-        ></Complied>)
+        ></Completed>)
       }
     </div>
   );

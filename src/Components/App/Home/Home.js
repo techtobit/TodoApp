@@ -9,7 +9,7 @@ const Home = () => {
       <Link to=''>Task</Link>
       <Link to='calendar'>Calendar</Link>
       <Link to='allTasks'>List</Link>
-      <Link to='complied'>Finish</Link>
+      <Link to='completed'>Finish</Link>
     </li>
   </>
 

@@ -10,7 +10,7 @@ const NavBar = () => {
    <Link to=''>Add Task</Link>
    <Link to='calendar'>Calendar</Link>
    <Link to='allTasks'>Task List</Link>
-   <Link to='complied'>Finish</Link>
+   <Link to='completed'>Finish</Link>
   </li>
  </>
  return (
@@ -38,7 +38,7 @@ const NavBar = () => {
    <div className="navbar-end">
     <div class="avatar">
      <div className=" AppLogo rounded-full">
-      <img className='AppLogo' src="https://placeimg.com/192/192/people" />
+      <img className='AppLogo' src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
      </div>
     </div>
    </div>
