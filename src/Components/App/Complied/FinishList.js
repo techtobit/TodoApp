@@ -5,7 +5,7 @@ const FinishList = () => {
   const [finishTask, setFinishTask] = useState([])
 
   useEffect(() => {
-    fetch('https://todo-app-backend-4cwf.vercel.app/taskFinish')
+    fetch('https://todo-app-backend-orpin-six.vercel.app/taskFinish')
       .then(res => res.json())
       .then(data => setFinishTask(data))
   }, [finishTask])

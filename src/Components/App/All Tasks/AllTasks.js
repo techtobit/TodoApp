@@ -19,14 +19,14 @@ const AllTasks = ({ tasks }) => {
         date: date,
         Description: Description
       }
-      const url = 'https://todo-app-backend-4cwf.vercel.app/taskFinish';
+      const url = 'https://todo-app-backend-orpin-six.vercel.app/taskFinish';
       axios.post(url, tasks)
         .then(response => {
           toast.success('Task Completed')
           console.log(response)
 
           //delete finish task from task list
-          const url = `https://todo-app-backend-4cwf.vercel.app/task/${_id}`
+          const url = `https://todo-app-backend-orpin-six.vercel.app/task/${_id}`
           axios.delete(url, _id)
             .then(response => {
               console.log(response)
