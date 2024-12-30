@@ -9,6 +9,7 @@ const Tasks = () => {
       .then(res => res.json())
       .then(data => setTasks(data))
   }, [tasks])
+  console.log(tasks)
 
   return [tasks, setTasks];
 };
