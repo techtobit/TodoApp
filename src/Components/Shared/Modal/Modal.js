@@ -14,7 +14,7 @@ const Modal = ({ taskId }) => {
 
 
   useEffect(() => {
-    const url = `https://secret-wave-39782.herokuapp.com/task/${taskId}`;
+    const url = `https://todo-app-backend-4cwf.vercel.app/task/${taskId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setUpDateTask(data))
@@ -23,7 +23,7 @@ const Modal = ({ taskId }) => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     if (data) {
-      const url = `https://secret-wave-39782.herokuapp.com/task/${taskId}`;
+      const url = `https://todo-app-backend-4cwf.vercel.app/task/${taskId}`;
       axios.put(url, data)
         .then(response => {
           toast.success('Done')
@@ -38,7 +38,7 @@ const Modal = ({ taskId }) => {
   const handleDeleteTask = Id => {
     if (Id) {
 
-      const url = `https://secret-wave-39782.herokuapp.com/task/${Id}`
+      const url = `https://todo-app-backend-4cwf.vercel.app/task/${Id}`
       axios.delete(url, Id)
         .then(response => {
           toast.success('Deleted')

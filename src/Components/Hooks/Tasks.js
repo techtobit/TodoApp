@@ -4,7 +4,7 @@ const Tasks = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    const url = 'https://secret-wave-39782.herokuapp.com/task';
+    const url = 'https://todo-app-backend-4cwf.vercel.app/task';
     fetch(url)
       .then(res => res.json())
       .then(data => setTasks(data))

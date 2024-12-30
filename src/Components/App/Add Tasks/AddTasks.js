@@ -18,7 +18,7 @@ const AddTasks = () => {
   const onSubmit = data => {
 
     if (data) {
-      const url = 'https://secret-wave-39782.herokuapp.com/task';
+      const url = 'https://todo-app-backend-4cwf.vercel.app/task';
       axios.post(url, data)
         .then(response => {
           toast.success('New Task Add')
